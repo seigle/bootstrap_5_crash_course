@@ -1,0 +1,13 @@
+BootStrap 5 Crash Course Tutorial  by Net Ninja
+https://www.youtube.com/watch?v=O_9u1P5YjVc
+
+Get Bootstrap <link> and <script>.
+
+Get LiveServer extension.
+
+Get asset content and other code references at:
+
+    https://github.com/iamshaunjp/bootstrap-5-tutorial
+
+        See the individual branches for the code changes per lesson in the sibling directory.
+
