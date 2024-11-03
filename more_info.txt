@@ -11,3 +11,23 @@ Get asset content and other code references at:
 
         See the individual branches for the code changes per lesson in the sibling directory.
 
+
+Various component documents may be found at:
+    https://getbootstrap.com/docs/5.3
+    
+    https://getbootstrap.com/docs/5.3/layout/containers
+
+
+    ....
+    
+                    Extra       Small       Medium      Large       X-Large     XX-Large
+                    Small
+                    < 576 px    >= 576px    >= 768 px   >= 992 px   >= 1200px   >= 1400px
+
+.container 	        100% 	    540px 	    720px 	    960px 	    1140px 	    1320px
+.container-sm 	    100% 	    540px 	    720px 	    960px 	    1140px 	    1320px
+.container-md 	    100% 	    100% 	    720px 	    960px 	    1140px 	    1320px
+.container-lg 	    100% 	    100% 	    100% 	    960px 	    1140px 	    1320px
+.container-xl 	    100% 	    100% 	    100% 	    100% 	    1140px 	    1320px
+.container-xxl 	    100% 	    100% 	    100% 	    100% 	    100% 	    1320px
+.container-fluid 	100% 	    100% 	    100% 	    100% 	    100% 	    100%
