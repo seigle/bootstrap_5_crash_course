@@ -19,7 +19,7 @@ Various component documents may be found at:
 
 
     ....
-    
+
                     Extra       Small       Medium      Large       X-Large     XX-Large
                     Small
                     < 576 px    >= 576px    >= 768 px   >= 992 px   >= 1200px   >= 1400px
@@ -31,3 +31,6 @@ Various component documents may be found at:
 .container-xl 	    100% 	    100% 	    100% 	    100% 	    1140px 	    1320px
 .container-xxl 	    100% 	    100% 	    100% 	    100% 	    100% 	    1320px
 .container-fluid 	100% 	    100% 	    100% 	    100% 	    100% 	    100%
+
+
+Grid layouts have an overall width with 12 parts.
