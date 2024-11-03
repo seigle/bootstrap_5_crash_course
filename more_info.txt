@@ -34,3 +34,7 @@ Various component documents may be found at:
 
 
 Grid layouts have an overall width with 12 parts.
+
+
+For Lesson 8 with the initial book layout, the book appears to be below and to the right of the text block....
+    instead of to the right of the text block.  Not sure why but continuing.
