@@ -36,5 +36,7 @@ Various component documents may be found at:
 Grid layouts have an overall width with 12 parts.
 
 
-For Lesson 8 with the initial book layout, the book appears to be below and to the right of the text block....
-    instead of to the right of the text block.  Not sure why but continuing.
+Icons may be found at: https://icons.getbootstrap.com/
+    and use the CDN in the <head> tag or download files:
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
