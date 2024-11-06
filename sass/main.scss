@@ -1,0 +1,30 @@
+// custom version of scss-docs-start theme-color-variables
+$primary: #c29938;
+$light: #fbf5e5;
+
+// import the functions & variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors: (
+  "altlight": #f2ebfa,
+  "altdark": #522192,
+);
+
+// Add the new custom colors to the existing group
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+// in this case: overriding the custom version of the theme-color-variables from
+// node_modules/bootstrap/scss/_variables.scss
+// $primary:       $blue !default;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+// scss-docs-end theme-color-variables
+
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";

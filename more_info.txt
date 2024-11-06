@@ -40,3 +40,128 @@ Icons may be found at: https://icons.getbootstrap.com/
     and use the CDN in the <head> tag or download files:
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+For customizing Bootstrap in Lesson #19, run:
+
+    npm init
+
+
+  at the project root directory, then run:
+
+    npm install bootstrap
+
+  accepting the default values in this case.
+
+Look under node_modules/bootstrap for different directories with custom files in different formats.
+
+The .scss files may used as a source for customizing the styles, but do not modify the original source folders.
+
+Create a root level directory, sass, and modify main.scss.
+
+Install the Extension of Live Sass Compiler by Ritwick Dey:
+
+    I installed the version from Glenn Marks as the other version is deprecated.
+
+Go to Settings... and search for:
+
+  live sass format
+
+Look for the title of "Live Sass Compile > Settings: Formats"
+
+then select the link: "Edit in settings.json"
+
+Replace/comment out:
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null,
+      "savePathReplacementPairs": null
+    }
+
+  with:
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css",
+      "savePathReplacementPairs": null
+    }
+
+Look for the Live Sass Compile option on the bottom status line of VS Code
+  and select it to watch and generate the file while watching the status in the OUTPUT view.
+
+For every change to the main.scss file (in this case), the changes will be built into the:
+
+    /css/main.min.css
+    /css/main.min.css.map
+    
+files.
+
+Now, reference the local CSS file instead of the link to the web-based CSS file in index.html:
+
+      <!--  Replacing the CDN version of the Bootstrap CSS file with the locally compiled CSS file. -->
+    <!--<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />-->
+
+    <!-- Use the locally compiled CSS with the custom change to the primary color -->
+    <link href="/css/main.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+
+The Live Server may need to be restarted.
+
+In this case, the primary color of blue has been changed to gold.
+
+The next change in the file:
+
+  /sass/min.scss
+  
+  is replacing the default value of:
+
+    $light:  $gray-100 !default;
+
+  to
+
+    $light: #fbf5e5;
+
+Note that there is only one additional line added to the /sass/min.scss file.
+
+The change is automatically picked up by the Live Sass Compiler and Live Server.
+The background is now the yellow-gold color as indicated above.
+
+
+For adding custom properties to existing groups in main.scss for Live Compiling:
+
+  // import the functions & variables
+  @import "../node_modules/bootstrap/scss/_functions";
+  @import "../node_modules/bootstrap/scss/_variables";
+
+  $custom-theme-colors: (
+      "altlight": #f2ebfa,
+      "altdark": #522192
+  );
+  
+  // Add the new custom colors to the existing group
+  $theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+
+Now update the index.html page to use the altlight color.
+
+    <!-- reviews list -->
+    <section id="reviews" class="bg-altlight">  <!-- instead of bg-light -->
+
+The Live Compile and Live Server will pick up the changes
+  and the Book Reviews section has a differnt background color.
+
+The stars in the Book Reviews can also be modified by adding 'text-altdark' as:
+
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+                  <i class="bi bi-star-fill text-altdark"></i>
+
+and the first entry has stars with the modified color.
